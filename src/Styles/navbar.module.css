@@ -13,6 +13,10 @@
     margin: auto;
 }
 
+.navbar a.active {
+    border-bottom: 1px solid #fff;
+}
+
 .navbar a {
     text-decoration: none;
     color: #fff;

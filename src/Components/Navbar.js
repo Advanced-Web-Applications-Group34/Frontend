@@ -2,10 +2,12 @@ import React from 'react'
 import { Link } from "react-router-dom";
 import styles from '../Styles/navbar.module.css'
 
+
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faShoppingCart } from '@fortawesome/free-solid-svg-icons'
 
 export default function NavBar() {
+
     return (
         <div>
             <nav className={styles.navbar}>
@@ -15,7 +17,7 @@ export default function NavBar() {
 
                 {/* Pages */}
                 <div className={styles.pages}>
-                    <Link to="/">Home</Link>
+                    <Link className={styles.link} to="/">Home</Link>
                     <Link to="/restaurants">Restaurants</Link>
                 </div>
 
