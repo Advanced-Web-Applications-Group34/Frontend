@@ -1,12 +1,17 @@
 import React from 'react'
 import styles from '../Styles/searchbar.module.css'
 
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faSearch } from '@fortawesome/free-solid-svg-icons'
+
+
 export default function Searchbar() {
     return (
         <div>
-            <div className={styles.searchbar}>
+            <div className={styles.container}>
 
-                <input type="text" placeholder="Let's find foods comforting you !" />
+                <input className={styles.searchbar} type="text" placeholder="Let's find foods comforting you !" />
+                <FontAwesomeIcon className={styles.icon} icon={faSearch} />
 
             </div>
         </div>

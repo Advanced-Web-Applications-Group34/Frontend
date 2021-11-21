@@ -2,6 +2,9 @@ import React from 'react'
 import { Link } from "react-router-dom";
 import styles from '../Styles/navbar.module.css'
 
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faShoppingCart } from '@fortawesome/free-solid-svg-icons'
+
 export default function NavBar() {
     return (
         <div>
@@ -19,7 +22,9 @@ export default function NavBar() {
                 {/* Cart and user personal page */}
                 <div className={styles.userPart}>
                     <Link to="/login">Log in</Link>
-                    <p>Cart</p>
+                    <Link to="/cart">
+                        <FontAwesomeIcon icon={faShoppingCart} />
+                    </Link>
                 </div>
                 
             </nav>
