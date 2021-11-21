@@ -1,5 +1,6 @@
 import React from 'react'
 import Searchbar from './Searchbar';
+import Restaurants from './Restaurants';
 
 
 export default function Home() {
@@ -8,6 +9,9 @@ export default function Home() {
 
             {/* SearchBar */}
             <Searchbar />
+
+            {/* Restaurants */}
+            <Restaurants />
             
         </div>
     )

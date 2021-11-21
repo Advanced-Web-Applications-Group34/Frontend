@@ -5,6 +5,10 @@
     position: relative;
 }
 
+.title {
+    font-size: 30px;
+}
+
 .pages {
     margin: auto;
 }
