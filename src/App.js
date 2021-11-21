@@ -1,5 +1,6 @@
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import Navbar from './Components/Navbar';
+import Searchbar from './Components/Searchbar';
 
 function App() {
   return (
@@ -7,7 +8,10 @@ function App() {
       <div className="App">
         
         {/* NavBar */}
-        <Navbar/>
+        <Navbar />
+        
+        {/* SearchBar */}
+        <Searchbar />
 
 
       </div>
