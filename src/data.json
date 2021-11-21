@@ -28,7 +28,7 @@
             "id": 4,
             "name": "Taco Bell",
             "image": "taco-bell.png",
-            "categories": ["Mexican"],
+            "categories": ["mexican"],
             "priceRange": "€€",
             "rate": 3.6
         },
