@@ -2,7 +2,7 @@ import {BrowserRouter, Routes,Route} from "react-router-dom";
 import Navbar from './Components/Navbar';
 import Home from './Components/Home';
 import Restaurants from './Components/Restaurants';
-import Login from './Components/Login';
+import SignInForm from "./Components/SignInForm";
 
 function App() {
   return (
@@ -16,7 +16,7 @@ function App() {
           <Routes>
             <Route path="/" element={<Home/>} />
             <Route path="restaurants" element={<Restaurants/>} />
-            <Route path="login" element={<Login/>} />
+            <Route path="login" element={<SignInForm/>} />
           </Routes>
         </div>
 
