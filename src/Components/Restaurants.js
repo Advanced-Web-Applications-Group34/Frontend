@@ -1,6 +1,7 @@
 import React from 'react'
 import data from '../data.json'
-import styles from '../Styles/searchbar.module.css'
+import styles from '../Styles/restaurantsView.module.css'
+
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faBiking } from '@fortawesome/free-solid-svg-icons'
@@ -52,20 +53,19 @@ export default function Restaurants() {
 
 
 
-            <div>
+            <div className={styles.categoryView}>
                 {categories.map(category => (
 
-                    <div>
-                        <p>{category.name}</p>
-
-                        {restaurants.map(restaurant => (
-                            <div>
-                                {restaurant.categories.map(categoryRestaurant => (
+                    <div className={styles.category}>
+                        <h3>{category.name}</h3>
+                        <div className={styles.displayRestaurants}>
+                            {restaurants.map(restaurant => (
+                                restaurant.categories.map(categoryRestaurant => (
 
                                     displayRestaurant(categoryRestaurant, category, restaurant)
-                                ))}
-                            </div>
-                        ))}
+                                ))
+                            ))}
+                        </div>
                     </div>
 
                 ))}
