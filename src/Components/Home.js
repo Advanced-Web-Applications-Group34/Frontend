@@ -12,18 +12,15 @@ export default function Home() {
     const categories = data.categories;
 
 
-    const [filteredData, setFilteredData] = useState([]);
+    const [filteredData, setFilteredData] = useState(restaurants);
 
 
     const onSearchFieldChange = (event) => {
         const searchWord = event.target.value;
-        console.log(event.target.value);
-        console.log("test");
         const newFilter = restaurants.filter((value) => {
-            return value.name.includes(searchWord);
+            return value.name.toLowerCase().includes(searchWord.toLowerCase());
         })
         setFilteredData(newFilter);
-        // setSearchString({ searchString: event.target.value });
     }
 
     return (

@@ -17,7 +17,7 @@ export default function SearchView(props) {
 
                 <h2>Restaurants</h2>
 
-                {props.restaurants.length !== 0 && (
+
                 <div className={styles.elementsGrid}>
                     {restaurants.map(restaurant => (
                         <div className={styles.elementPreview} key={restaurant.id} >
@@ -49,7 +49,7 @@ export default function SearchView(props) {
                         </div>
                     ))}
                 </div>
-                )}
+
 
                 <h2>Categories</h2>
 
