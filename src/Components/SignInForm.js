@@ -33,8 +33,6 @@ export default function SignInForm() {
                         <div>
                             <p className={styles.email}>Email</p>
                             <input type="email" 
-                                    name="email" 
-                                    id="email" 
                                     autoComplete="off"
                                     value={email}
                                     onChange={(e) => setEmail(e.target.value)}
@@ -44,8 +42,6 @@ export default function SignInForm() {
                         <div>
                             <p className={styles.password}>Password</p>
                             <input type="password" 
-                                    name="password" 
-                                    id="password" 
                                     autoComplete="off"
                                     value={password}
                                     onChange={(e) => setPassword(e.target.value)}
