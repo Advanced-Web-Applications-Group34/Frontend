@@ -1,14 +1,19 @@
-import React from 'react'
+import React from 'react';
+import styles from '../Styles/SignUpForm.module.css'
 
 export default function SignUpForm() {
     return (
-        <div className = "card">
-            <div>
-                <p>SIGN UP</p>
-            </div>
-            <div className="actions">
-                <button className="btn1">Create an user account</button>
-                <button className="btn1">Create a restaurant account</button>
+        <div className = {styles.card}>
+            <div className={styles.container}>
+                <div className={styles.title}>
+                    <p>SIGN UP</p>
+                </div>
+                <div>
+                    <button className={styles.btn1}>Create an user account</button>
+                </div>
+                <div>
+                    <button className={styles.btn2}>Create a restaurant account</button>
+                </div>
             </div>
         </div>
     )
