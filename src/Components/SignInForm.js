@@ -1,5 +1,5 @@
 import React, {useState} from 'react';
-import '../Styles/signInForm.css';
+import styles from '../Styles/signInForm.module.css';
 
 export default function SignInForm() {
     const [email, setEmail] = useState ("");
@@ -13,47 +13,51 @@ export default function SignInForm() {
         //prevent default process of the browser when event occurs
 
         const newLogin = { email: email, password: password };
-
         setAllLogin([ ...allLogin, newLogin ]);
         //when hitting the login button, data stored as a props
     }
 
     return (
-        <div className="form-wrapper">
-            <h2>Create an account or log in</h2>
-            <br></br>
-            <h3>Don't have an account ? Sign up </h3>
-            <form className="form-action" onSubmit={submitForm}>
+        <div className={styles.formWrapper}>
+            <div className={styles.container}>
                 <div>
-                    <label className="email">Email</label>
-                    <br></br>
-                    <input type="email" 
-                            name="email" 
-                            id="email" 
-                            autocomplete="off"
-                            value={email}
-                            onChange={(e) => setEmail(e.target.value)}
-                    />
-                </div> 
-
-                <div>
-                    <label className="password">Password</label>
-                    <br></br>
-                    <input type="password" 
-                            name="password" 
-                            id="password" 
-                            autocomplete="off"
-                            value={password}
-                            onChange={(e) => setPassword(e.target.value)}
-                    />
+                    <h2>Create an account or log in</h2>
                 </div>
-                <br></br>
+                <div className={styles.subSentence}>
+                    <p>Don't have an account ? 
+                        <a href="#">Sign up !</a>
+                    </p>
+                </div>
+                <div className={styles.formAction}>
+                    <form onSubmit={submitForm}>
+                        <div>
+                            <p className={styles.email}>Email</p>
+                            <input type="email" 
+                                    name="email" 
+                                    id="email" 
+                                    autoComplete="off"
+                                    value={email}
+                                    onChange={(e) => setEmail(e.target.value)}
+                            />
+                        </div> 
 
-                <button className="btn" type="submit">Login</button>
-            
+                        <div>
+                            <p className={styles.password}>Password</p>
+                            <input type="password" 
+                                    name="password" 
+                                    id="password" 
+                                    autoComplete="off"
+                                    value={password}
+                                    onChange={(e) => setPassword(e.target.value)}
+                            />
+                        </div>
 
-            </form>
-
+                        <div className={styles.btn}>
+                            <button type="submit">Login</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
         </div>
     )
 }
