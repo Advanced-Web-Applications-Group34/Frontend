@@ -6,8 +6,7 @@ export default function UserSignupSuccess() {
         <div className={styles.container}>
             <div className={styles.contentWrapper}>
                 <h1 className={styles.success}>Account created!</h1>
-            </div>
-            
+            </div> 
         </div>
     )
 }
