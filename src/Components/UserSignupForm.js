@@ -1,10 +1,17 @@
 import React, {useState} from 'react';
 import styles from'../Styles/UserSignupForm.module.css';
+//import UserSignupSuccess from '../Components/UserSignupSuccess';
 
 export default function UserSignupForm() {
-    const submitForm = (e) => {
+    const handleSubmitForm = (e) => {
         e.preventDefault();
     }
+
+    // const[formIsSubmitted, setFormIsSubmitted] = useState (false);
+    // const Submit = () => {
+    //     setFormIsSubmitted (true);
+    // }
+
     const [email, setEmail] = useState ("");
     const [name, setName] = useState ("");
     const [password, setPassword] = useState ("");
@@ -16,8 +23,8 @@ export default function UserSignupForm() {
                     <h2 className={styles.title}>Enter the following information</h2>
                 </div>
 
-                <form className={styles.formWrapper} onSubmit={submitForm}>
-                    <div clasName={styles.name}> 
+                <form className={styles.formWrapper} onSubmit={handleSubmitForm}>
+                    <div class Name={styles.name}> 
                         <label className={styles.label}>Full Name</label>
                         <input className={styles.input} 
                                 type="text" 
@@ -25,7 +32,7 @@ export default function UserSignupForm() {
                                 onChange={(e) => setName(e.target.value)}
                         />
                     </div>
-                    <div clasName={styles.email}>
+                    <div className={styles.email}>
                         <label className={styles.label}>Email</label>
                         <input className={styles.input} 
                                 type="email" 
@@ -33,7 +40,7 @@ export default function UserSignupForm() {
                                 onChange={(e) => setEmail(e.target.value)}
                         />
                     </div>
-                    <div clasName={styles.password}>
+                    <div className={styles.password}>
                         <label className={styles.label}>Password</label>
                         <input className={styles.input}
                                 type="password" 
@@ -42,10 +49,12 @@ export default function UserSignupForm() {
                         />
                     </div>
                     <div className={styles.submit}>
-                        <button>Sign Up</button>
+                        {/* <button onClick={Submit}>Sign Up</button> */}
+                        <button >Sign Up</button>
                     </div>
                 </form>
             </div>
+            {/* { formIsSubmitted && <UserSignupSuccess/>} */}
         </div>
     )
 }

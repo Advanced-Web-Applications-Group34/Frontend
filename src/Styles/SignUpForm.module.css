@@ -20,17 +20,15 @@
     letter-spacing: 1px;
 }
 
-button {
-    height: 50px;
-    width: 300px;
-    border-radius: 10px;
-    cursor: pointer;
-}
 button:hover{
     background-color: rgb(77, 213, 236)
 }
 
 .btn1{
+    height: 50px;
+    width: 300px;
+    border-radius: 10px;
+    cursor: pointer;
     background-color: rgba(32, 143, 151, 0.938);
     letter-spacing: 1px;
     font-weight: bold;
@@ -40,6 +38,10 @@ button:hover{
 } 
 
 .btn2{
+    height: 50px;
+    width: 300px;
+    border-radius: 10px;
+    cursor: pointer;
     background-color: rgba(32, 143, 151, 0.938);
     font-weight: bold;
     color: white;

@@ -1,5 +1,6 @@
 import React, {useState} from 'react';
 import styles from '../Styles/signInForm.module.css';
+import { Link } from 'react-router-dom';
 
 export default function SignInForm() {
     const [email, setEmail] = useState ("");
@@ -25,14 +26,17 @@ export default function SignInForm() {
                 </div>
                 <div className={styles.subSentence}>
                     <p>Don't have an account ? 
-                        <a href="#">Sign up !</a>
+                        <Link to ='./SignUpForm'>
+                            Sign up !
+                        </Link>
                     </p>
                 </div>
                 <div className={styles.formAction}>
                     <form onSubmit={submitForm}>
                         <div>
                             <p className={styles.email}>Email</p>
-                            <input type="email" 
+                            <input className={styles.input}
+                                    type="email" 
                                     autoComplete="off"
                                     value={email}
                                     onChange={(e) => setEmail(e.target.value)}
@@ -41,7 +45,8 @@ export default function SignInForm() {
 
                         <div>
                             <p className={styles.password}>Password</p>
-                            <input type="password" 
+                            <input className={styles.input}
+                                    type="password" 
                                     autoComplete="off"
                                     value={password}
                                     onChange={(e) => setPassword(e.target.value)}

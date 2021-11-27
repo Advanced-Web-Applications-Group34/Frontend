@@ -1,5 +1,6 @@
 import React from 'react';
-import styles from '../Styles/SignUpForm.module.css'
+import styles from '../Styles/SignUpForm.module.css';
+import {Link} from 'react-router-dom';
 
 export default function SignUpForm() {
     return (
@@ -9,7 +10,9 @@ export default function SignUpForm() {
                     <p>SIGN UP</p>
                 </div>
                 <div>
-                    <button className={styles.btn1}>Create an user account</button>
+                <Link to="./UserSignupForm">
+                    <button className={styles.btn1}>Create an user account</button>   
+                </Link>
                 </div>
                 <div>
                     <button className={styles.btn2}>Create a restaurant account</button>
