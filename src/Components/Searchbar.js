@@ -13,7 +13,7 @@ export default function Searchbar(props) {
                 <input className={styles.searchbar} type="text" onChange={ props.onSearchFieldChange } value={ props.searchString } placeholder="Let's find foods comforting you !" />
                 <FontAwesomeIcon className={styles.icon} icon={faSearch} />
 
-            </div>
+            </div> 
         </div>
     )
 }

@@ -1,5 +1,5 @@
 import React from 'react'
-import styles from '../Styles/searchView.module.css'
+import styles from '../Styles/restaurantsView.module.css'
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faBiking } from '@fortawesome/free-solid-svg-icons'
@@ -16,6 +16,7 @@ export default function SearchView(props) {
             <div className={styles.container}>
 
                 <h2>Restaurants</h2>
+
 
                 <div className={styles.elementsGrid}>
                     {restaurants.map(restaurant => (
@@ -48,6 +49,7 @@ export default function SearchView(props) {
                         </div>
                     ))}
                 </div>
+
 
                 <h2>Categories</h2>
 

@@ -7,6 +7,7 @@ import SignUpForm from "./Components/SignUpForm";
 //import UserForm from './Components/UserForm';
 import UserSignupForm from "./Components/UserSignupForm";
 //import UserSignupSuccess from './Components/UserSignupSuccess';
+import Cart from "./Components/Cart";
 
 function App() {
   return (
@@ -24,6 +25,7 @@ function App() {
             <Route path="/login/SignUpForm" element={<SignUpForm/>} />
             <Route path="/login/SignUpForm/UserSignupForm" element={<UserSignupForm/>} />
 
+            <Route path="cart" element={<Cart/>} />
           </Routes>
         </div>
 
