@@ -3,7 +3,9 @@ import Navbar from './Components/Navbar';
 import Home from './Components/Home';
 import Restaurants from './Components/Restaurants';
 //import SignInForm from "./Components/SignInForm";
-import SignUpForm from "./Components/SignUpForm";
+//import SignUpForm from "./Components/SignUpForm";
+//import UserForm from './Components/UserForm';
+import UserSignupForm from "./Components/UserSignupForm";
 
 function App() {
   return (
@@ -17,7 +19,7 @@ function App() {
           <Routes>
             <Route path="/" element={<Home/>} />
             <Route path="restaurants" element={<Restaurants/>} />
-            <Route path="login" element={<SignUpForm/>} />
+            <Route path="login" element={<UserSignupForm/>} />
           </Routes>
         </div>
 
