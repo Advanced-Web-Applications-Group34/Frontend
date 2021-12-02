@@ -1,5 +1,5 @@
 import React from 'react'
-import styles from '../Styles/signInForm.css';
+import styles from '../Styles/signInForm.module.css';
 
 export default function Cart() {
     return (

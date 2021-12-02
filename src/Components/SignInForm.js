@@ -1,5 +1,5 @@
 import React, {useState} from 'react';
-import '../Styles/signInForm.css';
+import '../Styles/signInForm.module.css';
 
 export default function SignInForm() {
     const [email, setEmail] = useState ("");

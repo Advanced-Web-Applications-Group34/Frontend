@@ -110,6 +110,43 @@
             "name": "Finnish",
             "image": "viking-restaurant-harald.png"
         }
+  ],
+
+  "products": [
+        {
+            "id": 1,
+            "id_restaurant": 1,
+            "category_name": "Menus",
+            "products": [
+                {
+                    "name": "Product name",
+                    "description": "Product description",
+                    "price": "7.50€"
+                },
+                {
+                    "name": "Product name 2",
+                    "description": "Product description 2",
+                    "price": "8.50€"
+                }
+            ]
+        },
+        {
+            "id": 2,
+            "id_restaurant": 1,
+            "category_name": "Snacks",
+            "products": [
+                {
+                    "name": "Product name",
+                    "description": "Product description",
+                    "price": "6.50€"
+                },
+                {
+                    "name": "Product name 2",
+                    "description": "Product description 2",
+                    "price": "5.50€"
+                }
+            ]
+        }
   ]
 
 }
