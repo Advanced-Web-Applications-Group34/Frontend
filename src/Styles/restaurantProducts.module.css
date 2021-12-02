@@ -1,0 +1,17 @@
+.container {
+    margin-top: 80px;
+}
+
+h1 {
+    text-align: center;
+}
+
+h2 {
+    margin-top: 50px;
+    margin-bottom: 20px;
+}
+
+ul li {
+    margin: 20px 10px;
+    list-style-type: none;
+}

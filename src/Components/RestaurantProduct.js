@@ -1,6 +1,6 @@
 import React from 'react'
 import { useParams } from "react-router-dom";
-import styles from '../Styles/searchbar.module.css'
+import styles from '../Styles/restaurantProducts.module.css'
 import data from '../data.json'
 
 
