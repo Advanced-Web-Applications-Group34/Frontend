@@ -2,10 +2,12 @@ import {BrowserRouter, Routes,Route} from "react-router-dom";
 import Navbar from './Components/Navbar';
 import Home from './Components/Home';
 import Restaurants from './Components/Restaurants';
-// import SignInForm from "./Components/SignInForm";
-// import SignUpForm from "./Components/SignUpForm";
-// import UserSignupForm from "./Components/UserSignupForm";
+import SignInForm from "./Components/SignInForm";
+import SignUpForm from "./Components/SignUpForm";
+import UserSignupForm from "./Components/UserSignupForm";
 import ResSignupForm from "./Components/ResSignupForm";
+import AdminView from "./Components/RestaurantForms/AdminView";
+import Menu from "./Components/RestaurantForms/Menu";
 import Cart from "./Components/Cart";
 
 function App() {
@@ -20,9 +22,13 @@ function App() {
           <Routes>
             <Route path="/" element={<Home/>} />
             <Route path="restaurants" element={<Restaurants/>} />
-            <Route path="login" element={<ResSignupForm/>} />
-            {/* <Route path="/login/SignUpForm" element={<SignUpForm/>} />
-            <Route path="/login/SignUpForm/UserSignupForm" element={<UserSignupForm/>} /> */}
+            <Route path="login" element={<SignInForm/>} />
+            <Route path="/login/SignUpForm" element={<SignUpForm/>} />
+            <Route path="/login/SignUpForm/UserSignupForm" element={<UserSignupForm/>} />
+            <Route path="/login/SignUpForm/ResSignupForm" element={<ResSignupForm/>} />
+            <Route path="/login/SignUpForm/ResSignupForm/AdminView" element={<AdminView/>} />
+            <Route path="/login/SignUpForm/ResSignupForm/AdminView/Menu" element={<Menu/>} />
+            <Route path="/login/SignUpForm/ResSignupForm/AdminView/Menu/AdminMode" element={<AdminView/>} />
             <Route path="cart" element={<Cart/>} />
           </Routes>
         </div>

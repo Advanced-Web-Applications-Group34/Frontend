@@ -1,5 +1,6 @@
 import React, {useState} from "react";
-import styles from "../../Styles/FormStyle/BasicInfo.module.css";
+import styles from "../../Styles/RestaurantForms/BasicInfo.module.css"; 
+import {Link} from 'react-router-dom';
 
 
 
@@ -8,11 +9,6 @@ export default function BasicInfo() {
         alert("Account" + name + "created !");
         e.preventDefault();
     };
-
-    // const[formIsSubmitted, setFormIsSubmitted] = useState (false);
-    // const Submit = () => {
-    //     setFormIsSubmitted (true);
-    // }
 
     const [name, setName] = useState("");
     const [address, setAddress] = useState("");
@@ -117,8 +113,9 @@ export default function BasicInfo() {
                         </div>
                     </div>
                     <div className={styles.submit}>
-                        {/* <button onClick={Submit}>Sign Up</button> */}
+                    <Link to="./AdminView">
                         <button>Next</button>
+                    </Link>
                     </div>
                 </form>
             </div>
