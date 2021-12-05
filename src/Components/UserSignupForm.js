@@ -4,6 +4,7 @@ import styles from'../Styles/UserSignupForm.module.css';
 
 export default function UserSignupForm() {
     const handleSubmitForm = (e) => {
+        alert('Account' + name + 'created !');
         e.preventDefault();
     }
 

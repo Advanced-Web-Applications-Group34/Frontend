@@ -15,7 +15,9 @@ export default function SignUpForm() {
                 </Link>
                 </div>
                 <div>
+                <Link to="./ResSignupForm">
                     <button className={styles.btn2}>Create a restaurant account</button>
+                </Link>
                 </div>
             </div>
         </div>
