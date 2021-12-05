@@ -1,0 +1,25 @@
+.container{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 60px;
+}
+
+.addingBtn{
+    margin-top: 20px;
+    height: 30px;
+    width: 100px;
+    border-radius: 10px;
+    cursor: pointer;
+} 
+.addingBtn:hover{
+    background-color: rgb(77, 213, 236);
+} 
+
+.disableBtn{
+    width:100%;
+}
+.disableBtn:hover{
+    background-color: rgb(77, 213, 236);
+} 
