@@ -118,7 +118,7 @@ export default function BasicInfo() {
                     </div>
                     <div className={styles.submit}>
                         {/* <button onClick={Submit}>Sign Up</button> */}
-                        <button>Sign Up</button>
+                        <button>Next</button>
                     </div>
                 </form>
             </div>
