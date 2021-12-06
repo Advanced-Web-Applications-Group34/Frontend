@@ -13,7 +13,9 @@ export default function NavBar() {
             <nav className={styles.navbar}>
 
                 {/* App title */}
-                <h1 className={styles.title}>AWA</h1>
+                <h1 className={styles.title}>
+                    <Link className={styles.link} to="/">AWA</Link>
+                </h1>
 
                 {/* Pages */}
                 <div className={styles.pages}>
