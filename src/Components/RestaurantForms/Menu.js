@@ -1,5 +1,5 @@
 import React from 'react';
-//import AdminView from './Components/RestaurantForms/AdminView';
+import AdminView from './AdminView';
 import {Link} from 'react-router-dom';
 import styles from '../../Styles/RestaurantForms/Menu.module.css';
 
@@ -12,13 +12,15 @@ class Menu extends React.Component {
         }
     }
 
-    addNewItem = (name, author, price) => {
+    addNewItem = (name, catergory, description, price, image) => {
         let newItems = [...this.state.items];
         newItems.push({
         id: newItems.length + 1,
         name: name,
-        author: author,
-        price: price
+        category: catergory,
+        description: description,
+        price: price,
+        image: image,
         });
 
         this.setState({
@@ -26,15 +28,15 @@ class Menu extends React.Component {
         });
     }
 
-    deleteItem = itemId => this.setState({items: this.state.items.filter(item => item.id !== itemId)})
+    deleteItem = itemId => this.setState({items: this.state.items.filter(curElem => curElem.id !== itemId)})
 
     render(){
 
         return (
             <>
-                {/* <div className={styles.products}>
+                <div className={styles.products}>
                     <AdminView />
-                </div> */}
+                </div>
                 <div>
                 <Link to='./AdminMode'>
                     <button onClick={ this.props.disableAdminMode }> Admin Mode</button>

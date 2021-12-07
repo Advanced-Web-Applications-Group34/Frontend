@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import {Link} from 'react-router-dom';
 import styles from '../../Styles/RestaurantForms/AdminView.module.css';
+import {useForm} from 'react-hook-form';
 
 export default function AdminView() {
 
@@ -11,14 +12,14 @@ export default function AdminView() {
     const [newItemDescription, setNewItemDescription] = useState("")
     const [newItemPrice, setNewItemPrice] = useState("");
     const [newItemImage, setNewItemImage] = useState("")
-
     const [allItem, setAllItem] = useState ([]);
 
     const addNewItem = () => {
         const newItem = 
         {
+            //id: newItem.id,
             name: newItemName, 
-            category: newItemCatergory,
+            catergory: newItemCatergory,
             description: newItemDescription,
             price:newItemPrice,
             image: newItemImage,
@@ -26,15 +27,18 @@ export default function AdminView() {
         setAllItem([...allItem, newItem]);
     }
 
-    // const onDeleteItemClick = (itemId) => {
-    //     console.log("clicked delete for item id " + itemId);
-    //     props.deleteItem(itemId);
-    // }
+    const register = useForm ();
+
+    const onDeleteItemClick = (itemId) => {
+        console.log("clicked delete for item id " + itemId);
+        //setAllItem(prevState => prevState.filter(({ id }) => id !== itemId));
+    }
 
     return (
         <div className={styles.container}>
             <div className={styles.content}>
-                <label>Add new item</label>
+                <label className={styles.label}>Let's create your menu !</label>
+                <br></br>
                 <div>Catergory
                     <select className={styles.resType} value={newItemCatergory} onChange={(e) => setNewItemCatergory(e.target.value)}>
                         <option value="Burger">Buffet</option>
@@ -63,25 +67,28 @@ export default function AdminView() {
                                 onChange={ (e) => setNewItemPrice(e.target.value) } />
                 </div>
                 <div>
-                    Choose file: <input type ='image' 
+                    Choose file: <input ref ={register}
+                                        type ='file' 
+                                        name ='picture'
                                         value ={newItemImage}
-                                        onchange={ (e) => setNewItemImage(e.target.value) } />
+                                        onChange={ (e) => setNewItemImage(e.target.value) } />
                 </div>
                 <button className ={styles.addingBtn} onClick={ addNewItem }>Add Item</button>
             </div>
 
-            <div>
-                <h1>List of items</h1>
-                { 
-                    allItem.map((curElem) =>{
+            <div className={styles.listWrapper}>
+                <h2>List of items</h2>
+                {
+                    allItem.map((curElem,index) =>{
+                        //console.log(curElem)
                         return (
-                            <div>
-                                <p>{curElem.newItemCatergory}</p>
-                                <p>{curElem.newItemName}</p>
-                                <p>{curElem.newItemDescription}</p>
-                                <p>{curElem.newItemPrice}</p>
-                                <p>{curElem.newItemImage}</p>
-                                {/* <button onClick={() => onDeleteItemClick(item.id)}>X</button> {item.name}, {item.author}, {item.price} */}
+                            <div className ={styles.itemList} key = {index}>
+                                <button className ={styles.deleteBtn} onClick={() => onDeleteItemClick(curElem.id)}>X</button>
+                                <p>{curElem.catergory} -</p>
+                                <p>{curElem.name} -</p>
+                                <p>{curElem.description} -</p>
+                                <p>{curElem.price} -</p>
+                                <p>{curElem.image} </p>
                             </div>
                         )
                     })
