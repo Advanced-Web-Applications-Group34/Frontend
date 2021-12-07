@@ -8,7 +8,7 @@ export default function Cart() {
 
             <div className={styles.formWrapper}>
 
-                <ul>
+                <ul className={styles.deliveryChoice}>
                     <li>Delivery</li> 
                     <li>
                         <label class={styles.switch}>
