@@ -86,7 +86,6 @@
         "id": 2,
         "name": "Sushi",
         "image": "luckiefun.png"
-<<<<<<< HEAD
         },
         {
         "id": 3,
@@ -113,7 +112,7 @@
         "name": "Finnish",
         "image": "viking-restaurant-harald.png"
         }
-<<<<<<< HEAD
+
   ],
 
   "products": [
@@ -154,37 +153,4 @@
   ]
 
 }
-=======
-    ]
-}
->>>>>>> 0599572248bdefd7c9774c25789901c42f1b0402
-=======
-        },
-        {
-        "id": 3,
-        "name": "Pizza",
-        "image": "plan-b.jpeg"
-        },
-        {
-        "id": 4,
-        "name": "Mexican",
-        "image": "taco-bell.png"
-        },
-        {
-        "id": 5,
-        "name": "Kebap",
-        "image": "best-kebap.jpg"
-        },
-        {
-        "id": 6,
-        "name": "Asian",
-        "image": "noodle-bar-9.jpg"
-        },
-        {
-        "id": 7,
-        "name": "Finnish",
-        "image": "viking-restaurant-harald.png"
-        }
-    ]
-}
->>>>>>> 0599572248bdefd7c9774c25789901c42f1b0402
+
