@@ -17,6 +17,7 @@ export default function AdminView() {
     const addNewItem = () => {
         const newItem = 
         {
+            id: Date.now(),
             name: newItemName, 
             category: newItemCategory,
             description: newItemDescription,
@@ -31,8 +32,7 @@ export default function AdminView() {
     const register = useForm ();
 
     const onDeleteItemClick = (itemId) => {
-        console.log("clicked delete for item id " + itemId);
-        //setAllItem(prevState => prevState.filter(({ id }) => id !== itemId));
+        setAllItem(prevState => prevState.filter(({ id }) => id !== itemId));
     }
 
     return (
