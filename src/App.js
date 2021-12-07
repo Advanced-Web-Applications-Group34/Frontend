@@ -25,9 +25,12 @@ function App() {
             <Route path="restaurants" element={<Restaurants/>} />
             <Route path="login" element={<SignInForm/>} />
 <<<<<<< HEAD
+<<<<<<< HEAD
             <Route path="cart" element={<Cart />} />
             <Route path="/restaurant/:id" element={<RestaurantProduct />} />
 =======
+=======
+>>>>>>> 0599572248bdefd7c9774c25789901c42f1b0402
             <Route path="/login/SignUpForm" element={<SignUpForm/>} />
             <Route path="/login/SignUpForm/UserSignupForm" element={<UserSignupForm/>} />
             <Route path="/login/SignUpForm/ResSignupForm" element={<ResSignupForm/>} />

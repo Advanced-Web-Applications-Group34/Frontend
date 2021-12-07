@@ -1,5 +1,6 @@
 import React, {useState} from 'react';
 import styles from '../Styles/signInForm.module.css';
+import { Link } from 'react-router-dom';
 
 export default function SignInForm() {
     const [email, setEmail] = useState ("");
@@ -25,9 +26,9 @@ export default function SignInForm() {
                 </div>
                 <div className={styles.subSentence}>
                     <p>Don't have an account ? 
-                        {/* <Link to ='./SignUpForm'>
+                        <Link to ='./SignUpForm'>
                             Sign up !
-                        </Link> */}
+                        </Link>
                     </p>
                 </div>
                 <div className={styles.formAction}>
