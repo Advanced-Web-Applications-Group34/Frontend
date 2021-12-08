@@ -1,5 +1,5 @@
 import React from 'react'
-import styles from '../Styles/searchView.module.css'
+import styles from '../Styles/restaurantsView.module.css'
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faBiking } from '@fortawesome/free-solid-svg-icons'
