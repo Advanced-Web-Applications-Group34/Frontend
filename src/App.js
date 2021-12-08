@@ -9,6 +9,7 @@ import ResSignupForm from "./Components/ResSignupForm";
 import AdminView from "./Components/RestaurantForms/AdminView";
 import Menu from "./Components/RestaurantForms/Menu";
 import Cart from "./Components/Cart";
+import RestaurantProduct from "./Components/RestaurantProduct";
 
 function App() {
   return (
@@ -22,14 +23,16 @@ function App() {
           <Routes>
             <Route path="/" element={<Home/>} />
             <Route path="restaurants" element={<Restaurants/>} />
-            <Route path="login" element={<SignInForm/>} />
+            <Route path="login" element={<SignInForm />} />
             <Route path="/login/SignUpForm" element={<SignUpForm/>} />
             <Route path="/login/SignUpForm/UserSignupForm" element={<UserSignupForm/>} />
             <Route path="/login/SignUpForm/ResSignupForm" element={<ResSignupForm/>} />
             <Route path="/login/SignUpForm/ResSignupForm/AdminView" element={<AdminView/>} />
             <Route path="/login/SignUpForm/ResSignupForm/AdminView/Menu" element={<Menu/>} />
             <Route path="/login/SignUpForm/ResSignupForm/AdminView/Menu/AdminMode" element={<AdminView/>} />
-            <Route path="cart" element={<Cart/>} />
+            <Route path="cart" element={<Cart />} />
+            <Route path="/restaurant/:id" element={<RestaurantProduct />} />
+
           </Routes>
         </div>
 

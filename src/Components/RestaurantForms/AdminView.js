@@ -6,32 +6,33 @@ import {useForm} from 'react-hook-form';
 export default function AdminView() {
 
     const [newItemName, setNewItemName] = useState("");
-    const [newItemCatergory, setNewItemCatergory] = useState({
+    const [newItemCategory, setNewItemCategory] = useState({
         value: 'Burger'
     });
     const [newItemDescription, setNewItemDescription] = useState("")
     const [newItemPrice, setNewItemPrice] = useState("");
     const [newItemImage, setNewItemImage] = useState("")
-    const [allItem, setAllItem] = useState ([]);
+    const [allItem, setAllItem] = useState([]);
 
     const addNewItem = () => {
         const newItem = 
         {
-            //id: newItem.id,
+            id: Date.now(),
             name: newItemName, 
-            catergory: newItemCatergory,
+            category: newItemCategory,
             description: newItemDescription,
             price:newItemPrice,
             image: newItemImage,
         };
+
         setAllItem([...allItem, newItem]);
     }
+
 
     const register = useForm ();
 
     const onDeleteItemClick = (itemId) => {
-        console.log("clicked delete for item id " + itemId);
-        //setAllItem(prevState => prevState.filter(({ id }) => id !== itemId));
+        setAllItem(prevState => prevState.filter(({ id }) => id !== itemId));
     }
 
     return (
@@ -39,8 +40,8 @@ export default function AdminView() {
             <div className={styles.content}>
                 <label className={styles.label}>Let's create your menu !</label>
                 <br></br>
-                <div>Catergory
-                    <select className={styles.resType} value={newItemCatergory} onChange={(e) => setNewItemCatergory(e.target.value)}>
+                <div>Category
+                    <select className={styles.resType} value={newItemCategory} onChange={(e) => setNewItemCategory(e.target.value)}>
                         <option value="Burger">Buffet</option>
                         <option value="Sushi">Fast-food</option>
                         <option value="Pizza">Fast-casual</option>
@@ -78,21 +79,16 @@ export default function AdminView() {
 
             <div className={styles.listWrapper}>
                 <h2>List of items</h2>
-                {
-                    allItem.map((curElem,index) =>{
-                        //console.log(curElem)
-                        return (
-                            <div className ={styles.itemList} key = {index}>
-                                <button className ={styles.deleteBtn} onClick={() => onDeleteItemClick(curElem.id)}>X</button>
-                                <p>{curElem.catergory} -</p>
-                                <p>{curElem.name} -</p>
-                                <p>{curElem.description} -</p>
-                                <p>{curElem.price} -</p>
-                                <p>{curElem.image} </p>
-                            </div>
-                        )
-                    })
-                }
+                {allItem.map(curElem => (
+                    <div className ={styles.itemList}>
+                        <button className ={styles.deleteBtn} onClick={() => onDeleteItemClick(curElem.id)}>X</button>
+                        <p>{curElem.category.value} - </p>
+                        <p>{curElem.name} {curElem.name ? "- " : ""}</p>
+                        <p>{curElem.description} {curElem.description ? "- " : ""}</p>
+                        <p>{curElem.price} {curElem.price ? "- " : ""}</p>
+                        <p>{curElem.image}</p>
+                    </div>
+                ))}
             </div>
 
             <div>

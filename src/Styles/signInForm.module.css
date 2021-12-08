@@ -26,6 +26,12 @@ h2 {
     padding-bottom: 5px
 }
 
+.subSentence a {
+    color:rgb(49, 117, 206);
+    margin: 0 10px;
+    text-decoration: underline;
+}
+
 .formAction{
     height: max-height;
 }

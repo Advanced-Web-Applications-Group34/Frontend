@@ -10,6 +10,11 @@ h4 {
     color: rgb(162, 162, 162);
 }
 
+a {
+    text-decoration: none;
+    color: #fff;
+}
+
 .elementPreview {
     background-color: #375285;
     border-radius: 20px;

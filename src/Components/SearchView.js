@@ -20,30 +20,34 @@ export default function SearchView(props) {
                 <div className={styles.elementsGrid}>
                     {restaurants.map(restaurant => (
                         <div className={styles.elementPreview} key={restaurant.id} >
-                            <img src={`/images/restaurants/${restaurant.image}`} alt={restaurant.name} />
+                            <a href={`/restaurant/${restaurant.id}`}>
 
-                            <div className={styles.bottomElement}>
+                                <img src={`/images/restaurants/${restaurant.image}`} alt={restaurant.name} />
 
-                                <h3>{restaurant.name}</h3>
-                                <h4>{restaurant.categories.map(category => (
-                                    <span>{category}</span>
-                                ))}</h4>
+                                <div className={styles.bottomElement}>
 
-                                <div className={styles.informations}>
-                                    <div className={styles.deliveryPrice}>
-                                        <FontAwesomeIcon icon={faBiking} />
-                                        <p>€1.90</p>
+                                    <h3>{restaurant.name}</h3>
+                                    <h4>{restaurant.categories.map(category => (
+                                        <span>{category}</span>
+                                    ))}</h4>
+
+                                    <div className={styles.informations}>
+                                        <div className={styles.deliveryPrice}>
+                                            <FontAwesomeIcon icon={faBiking} />
+                                            <p>€1.90</p>
+                                        </div>
+                                        <div className={styles.priceRange}>
+                                            <p>{restaurant.priceRange}</p>
+                                        </div>
+                                        <div className={styles.rate}>
+                                            <FontAwesomeIcon icon={faStar} />
+                                            <p>{restaurant.rate}/5</p>
+                                        </div>
                                     </div>
-                                    <div className={styles.priceRange}>
-                                        <p>{restaurant.priceRange}</p>
-                                    </div>
-                                    <div className={styles.rate}>
-                                        <FontAwesomeIcon icon={faStar} />
-                                        <p>{restaurant.rate}/5</p>
-                                    </div>
+
                                 </div>
-
-                            </div>
+                                
+                            </a>
                                 
                         </div>
                     ))}

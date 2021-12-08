@@ -1,17 +1,20 @@
 import React from 'react'
-import styles from '../Styles/cart.css';
+import styles from '../Styles/cart.module.css';
+
 
 export default function Cart() {
     return (
         <div>
 
-            <div className="form-wrapper">
+            <div className={styles.formWrapper}>
 
-                <ul>
+                <ul className={styles.deliveryChoice}>
                     <li>Delivery</li> 
                     <li>
-                        <input type="checkbox" name="" id="" />
-                        <span className={styles.slider}></span>
+                        <label class={styles.switch}>
+                            <input type="checkbox" />
+                            <span class={styles.slider}></span>
+                        </label>
                     </li>
                     <li>Pick-up</li> 
                 </ul>
@@ -19,19 +22,19 @@ export default function Cart() {
                 <h2>Your cart</h2>
                 <h3>Start adding items to your cart</h3>
 
-                <div>
-                    <div>
+                <div className={styles.priceContainer}>
+                    <div className={styles.price}>
                         <p>Subtotal :</p>
                         <p>0€</p>
                     </div>
-                    <div>
+                    <div className={styles.price}>
                         <p>Total :</p>
                         <p>0€</p>
                     </div>
                 </div>
 
                 <form className="form-action">
-                    <button className="btn" type="submit">Go to checkout</button>
+                    <button className={styles.button} type="submit">Go to checkout</button>
                 </form>
 
             </div>
