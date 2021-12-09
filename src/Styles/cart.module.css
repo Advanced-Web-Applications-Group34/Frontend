@@ -113,7 +113,11 @@ h3 {
     color: white;
     cursor: pointer;
     font-size: 18px;
-    line-height: 15px;
+    line-height: 11px;
     height: 30px;
     width: 200px;
+}
+
+.button:hover {
+  background-color: #1a78c5;
 }
