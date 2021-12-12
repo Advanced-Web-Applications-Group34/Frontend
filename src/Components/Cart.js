@@ -50,7 +50,7 @@ export default function Cart() {
                                 <td className={styles.buttons}>
                                     <button onClick={() => updateItemQuantity(item.id, item.quantity - 1)}>-</button>
                                     <button onClick={() => updateItemQuantity(item.id, item.quantity + 1)}>+</button>
-                                    <button onClick={() => removeItem(item.id)}><FontAwesomeIcon icon={faTrash} /></button>
+                                    <button className={styles.deleteButton} onClick={() => removeItem(item.id)}><FontAwesomeIcon icon={faTrash} /></button>
                                 </td>
                             </tr>
                         )

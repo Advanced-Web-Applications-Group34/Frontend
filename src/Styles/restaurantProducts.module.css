@@ -26,9 +26,14 @@
     justify-content: space-between;
 }
 
-.cartButton {
+.cartButton button {
     margin-left: 40px;
     cursor: pointer;
+    width: auto;
+    height: auto;
+    padding: 5px 10px;
+    font-size: 16px;
+    background-color: rgb(117, 194, 155);
 }
 
 .cartButton:hover {
