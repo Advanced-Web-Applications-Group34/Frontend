@@ -2,6 +2,7 @@ import React from 'react'
 import { useParams } from "react-router-dom";
 import styles from '../Styles/restaurantProducts.module.css'
 import data from '../data.json'
+import { useCart } from "react-use-cart"
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faCartPlus } from '@fortawesome/free-solid-svg-icons'
@@ -10,6 +11,7 @@ import { faCartPlus } from '@fortawesome/free-solid-svg-icons'
 
 export default function RestaurantProduct() {
     
+    const { addItem } = useCart();
     const { id } = useParams();
     const categories = data.products
 
@@ -45,10 +47,12 @@ export default function RestaurantProduct() {
                                 <div>
                                     <h3>{product.name}</h3>
                                     <p>{product.description}</p>
-                                    <p>{product.price}</p>
+                                    <p>{product.price} €</p>
                                 </div>
                                 <div className={styles.cartButton}>
-                                    <FontAwesomeIcon icon={faCartPlus} />
+                                    <button onClick={() => addItem(product)}>
+                                        <FontAwesomeIcon icon={faCartPlus} />
+                                    </button>
                                 </div>
                             </li>
                         ))}

@@ -10,6 +10,7 @@ import AdminView from "./Components/RestaurantForms/AdminView";
 import Menu from "./Components/RestaurantForms/Menu";
 import Cart from "./Components/Cart";
 import RestaurantProduct from "./Components/RestaurantProduct";
+import { CartProvider } from "react-use-cart";
 
 function App() {
   return (
@@ -29,11 +30,17 @@ function App() {
             <Route path="/login/SignUpForm/ResSignupForm" element={<ResSignupForm/>} />
             <Route path="/login/SignUpForm/ResSignupForm/AdminView" element={<AdminView/>} />
             <Route path="/login/SignUpForm/ResSignupForm/AdminView/Menu" element={<Menu/>} />
-            <Route path="/login/SignUpForm/ResSignupForm/AdminView/Menu/AdminMode" element={<AdminView/>} />
-            <Route path="cart" element={<Cart />} />
-            <Route path="/restaurant/:id" element={<RestaurantProduct />} />
+            <Route path="/login/SignUpForm/ResSignupForm/AdminView/Menu/AdminMode" element={<AdminView />} />
 
           </Routes>
+
+          <CartProvider>
+            <Routes>
+                <Route path="cart" element={<Cart />} />
+                <Route path="/restaurant/:id" element={<RestaurantProduct />} />
+            </Routes>
+          </CartProvider>
+
         </div>
 
 
