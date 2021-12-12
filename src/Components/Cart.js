@@ -2,6 +2,9 @@ import React from 'react'
 import styles from '../Styles/cart.module.css';
 import { useCart } from 'react-use-cart';
 
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faTrash } from '@fortawesome/free-solid-svg-icons'
+
 
 export default function Cart() {
 
@@ -31,23 +34,23 @@ export default function Cart() {
                 <div>
                     {items.map((item, index) => {
                         return(
-                            <tr key={index}>
+                            <tr className={styles.cartItem} key={index}>
                                 <td>
                                     {item.name}
                                 </td>
                                 <td>
                                     {item.description}
                                 </td>
-                                <td>
+                                <td className={styles.itemPrice}>
                                     {item.price} €
                                 </td>
-                                <td>
-                                    Quantity {item.quantity}
+                                <td className={styles.itemQuantity}>
+                                    x {item.quantity}
                                 </td>
-                                <td>
+                                <td className={styles.buttons}>
                                     <button onClick={() => updateItemQuantity(item.id, item.quantity - 1)}>-</button>
                                     <button onClick={() => updateItemQuantity(item.id, item.quantity + 1)}>+</button>
-                                    <button onClick={() => removeItem(item.id)}>Remove item</button>
+                                    <button onClick={() => removeItem(item.id)}><FontAwesomeIcon icon={faTrash} /></button>
                                 </td>
                             </tr>
                         )
@@ -55,10 +58,6 @@ export default function Cart() {
                 </div>
 
                 <div className={styles.priceContainer}>
-                    <div className={styles.price}>
-                        <p>Subtotal :</p>
-                        <p>0€</p>
-                    </div>
                     <div className={styles.price}>
                         <p>Total :</p>
                         <p>{cartTotal}€</p>

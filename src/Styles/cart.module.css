@@ -1,8 +1,7 @@
 .formWrapper {
     position: relative;
     border: 2px;
-    width: 350px;
-    height: 350px;
+    width: 75%;
     padding: 20px;
     border-radius: 10px;
     box-sizing: border-box;
@@ -11,6 +10,7 @@
     margin-right: auto;
     text-align: center;   
     box-shadow: 5px 5px 10px grey ;
+    background-color: #281c41;
 }
 
 
@@ -120,4 +120,29 @@ h3 {
 
 .button:hover {
   background-color: #1a78c5;
+}
+
+
+.cartItem {
+  font-size: 16px;
+}
+
+.cartItem td {
+  padding: 0 20px;
+}
+
+.buttons {
+  display: flex;
+  gap: 5px;
+}
+
+.buttons button {
+  padding: 2px 10px;
+  width: auto;
+  height: auto;
+  font-size: 16px;
+}
+
+.itemPrice, .itemQuantity {
+  width: 100px;
 }
