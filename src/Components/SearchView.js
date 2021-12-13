@@ -15,7 +15,6 @@ export default function SearchView(props) {
 
                 <h2>Restaurants</h2>
 
-
                 <div className={styles.elementsGrid}>
                     {restaurants.map(restaurant => (
                         <RestaurantCard
@@ -29,7 +28,6 @@ export default function SearchView(props) {
                         </RestaurantCard>
                     ))}
                 </div>
-
 
                 <h2>Categories</h2>
 

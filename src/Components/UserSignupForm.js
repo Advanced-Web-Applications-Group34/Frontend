@@ -7,12 +7,7 @@ export default function UserSignupForm() {
         alert('Account' + name + 'created !');
         e.preventDefault();
     }
-
-    // const[formIsSubmitted, setFormIsSubmitted] = useState (false);
-    // const Submit = () => {
-    //     setFormIsSubmitted (true);
-    // }
-
+    
     const [email, setEmail] = useState ("");
     const [name, setName] = useState ("");
     const [password, setPassword] = useState ("");
