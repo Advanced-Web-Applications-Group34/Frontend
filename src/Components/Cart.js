@@ -60,8 +60,12 @@ export default function Cart() {
 
                 <div className={styles.priceContainer}>
                     <div className={styles.price}>
-                        <p>Total :</p>
+                        <p>Subtotal :</p>
                         <p>{cartTotal}€</p>
+                    </div>
+                    <div className={styles.price}>
+                        <p>Total :</p>
+                        <p>{cartTotal + 4.5}€</p>
                     </div>
                 </div>
 
