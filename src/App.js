@@ -33,8 +33,6 @@ function App() {
             <Route path="/login/SignUpForm/ResSignupForm/AdminView" element={<AdminView/>} />
             {/* <Route path="/login/SignUpForm/ResSignupForm/AdminView/Menu" element={<Menu/>} /> */}
             <Route path="/login/SignUpForm/ResSignupForm/AdminView/Menu/AdminMode" element={<AdminView />} />
-            <Route path="cart" element={<Cart />} />
-            <Route path="/restaurant/:id" element={<RestaurantProduct />} />
 
           </Routes>
 
