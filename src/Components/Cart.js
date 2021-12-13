@@ -65,7 +65,7 @@ export default function Cart() {
                     </div>
                     <div className={styles.price}>
                         <p>Total :</p>
-                        <p>{cartTotal + 4.5}€</p>
+                        <p>{cartTotal > 0 ? cartTotal + 4.5 : cartTotal}€</p>
                     </div>
                 </div>
 
