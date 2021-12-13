@@ -1,11 +1,7 @@
 import React from 'react'
 import data from '../data.json'
 import styles from '../Styles/restaurantsView.module.css'
-
-
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faBiking } from '@fortawesome/free-solid-svg-icons'
-import { faStar } from '@fortawesome/free-solid-svg-icons'
+import RestaurantCard from './RestaurantCard';
 
 
 export default function Restaurants() {
@@ -16,35 +12,15 @@ export default function Restaurants() {
     // Display restaurants of each category
     const displayRestaurant = (categoryRestaurant, category, restaurant) => {
         if (category.name.toLowerCase() === categoryRestaurant.toLowerCase()) {
-            return <div className={styles.elementPreview} key={restaurant.id} >
-                <a href={`/restaurant/${restaurant.id}`}>
-                    <img src={`/images/restaurants/${restaurant.image}`} alt={restaurant.name} />
-
-                    <div className={styles.bottomElement}>
-
-                        <h3>{restaurant.name}</h3>
-                        <h4>{restaurant.categories.map(category => (
-                            <span>{category}</span>
-                        ))}</h4>
-
-                        <div className={styles.informations}>
-                            <div className={styles.deliveryPrice}>
-                                <FontAwesomeIcon icon={faBiking} />
-                                <p>€1.90</p>
-                            </div>
-                            <div className={styles.priceRange}>
-                                <p>{restaurant.priceRange}</p>
-                            </div>
-                            <div className={styles.rate}>
-                                <FontAwesomeIcon icon={faStar} />
-                                <p>{restaurant.rate}/5</p>
-                            </div>
-                        </div>
-
-                    </div>
-                </a>
-
-            </div>
+            return <RestaurantCard
+                        id={restaurant.id}
+                        image={restaurant.image}
+                        name={restaurant.name}
+                        categories={restaurant.categories}
+                        priceRange={restaurant.priceRange}
+                        rate={restaurant.rate}
+                    >
+                    </RestaurantCard>
 
         }
     }

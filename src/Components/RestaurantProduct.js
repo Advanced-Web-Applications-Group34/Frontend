@@ -20,7 +20,6 @@ export default function RestaurantProduct() {
         data.restaurants.map(restaurant => (
             restaurant.id == id ? restaurantFound = restaurant : ""
         ))
-        console.log(restaurantFound);
         return restaurantFound
     }
 

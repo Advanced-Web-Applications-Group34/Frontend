@@ -11,6 +11,7 @@ import Menu from "./Components/RestaurantForms/Menu";
 import Cart from "./Components/Cart";
 import Checkout from "./Components/Checkout";
 import RestaurantProduct from "./Components/RestaurantProduct";
+import Category from "./Components/Category";
 import { CartProvider } from "react-use-cart";
 
 function App() {
@@ -39,6 +40,7 @@ function App() {
             <Routes>
                 <Route path="cart" element={<Cart />} />
                 <Route path="/restaurant/:id" element={<RestaurantProduct />} />
+                <Route path="/category/:id" element={<Category />} />
                 <Route path="/checkout" element={<Checkout />} />
             </Routes>
           </CartProvider>
