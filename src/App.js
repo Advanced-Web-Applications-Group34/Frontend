@@ -9,6 +9,7 @@ import ResSignupForm from "./Components/ResSignupForm";
 import AdminView from "./Components/RestaurantForms/AdminView";
 import Menu from "./Components/RestaurantForms/Menu";
 import Cart from "./Components/Cart";
+import Checkout from "./Components/Checkout";
 import RestaurantProduct from "./Components/RestaurantProduct";
 import { CartProvider } from "react-use-cart";
 
@@ -38,6 +39,7 @@ function App() {
             <Routes>
                 <Route path="cart" element={<Cart />} />
                 <Route path="/restaurant/:id" element={<RestaurantProduct />} />
+                <Route path="/checkout" element={<Checkout />} />
             </Routes>
           </CartProvider>
 

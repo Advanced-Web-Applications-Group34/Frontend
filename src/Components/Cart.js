@@ -1,6 +1,7 @@
 import React from 'react'
 import styles from '../Styles/cart.module.css';
 import { useCart } from 'react-use-cart';
+import { Link } from "react-router-dom";
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faTrash } from '@fortawesome/free-solid-svg-icons'
@@ -8,7 +9,7 @@ import { faTrash } from '@fortawesome/free-solid-svg-icons'
 
 export default function Cart() {
 
-    const { isEmpty, totalUniqueItems, items, totalItems, cartTotal, updateItemQuantity, removeItem, emptyCart } = useCart();
+    const { isEmpty, items, cartTotal, updateItemQuantity, removeItem } = useCart();
 
     return (
         <div>
@@ -65,7 +66,9 @@ export default function Cart() {
                 </div>
 
                 <form className="form-action">
-                    <button className={styles.button} type="submit">Go to checkout</button>
+                    <Link to="/checkout">
+                        <button className={styles.button} type="submit">Go to checkout</button>
+                    </Link>
                 </form>
 
             </div>
