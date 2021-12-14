@@ -12,3 +12,30 @@
     box-shadow: 5px 5px 10px grey ;
     background-color: #281c41;
 }
+
+.cardInformation {
+    margin: 40px;
+}
+
+.cardInformation input {
+    display: block;
+    border: none;
+    outline: none;
+    padding-left: 5px;
+    width: 100%;
+}
+
+.cardInformation label {
+    display: block;
+    text-align: left;
+    margin-top: 10px;
+}
+
+.cardInformation button {
+    margin-top: 40px;
+}
+
+.cardInformation > div {
+    display: flex;
+    justify-content: space-between;
+}

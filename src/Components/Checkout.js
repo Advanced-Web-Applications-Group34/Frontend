@@ -19,14 +19,22 @@ export default function Checkout() {
         <div>
             <div className={styles.formWrapper}>
                 <h2>Checkout</h2>
-                <div>
+
+                <form onSubmit={onSubmit} className={styles.cardInformation}>
+                    <label for="cardNumber">Card number</label>
                     <input type="text" name="cardNumber" id="number" />
-                    <form onSubmit={onSubmit}>
-                        <input type="date" name="expirationDate" id="" min="today" />
-                        <input type="text" name="CVV" id="CVV" maxLength="3" />
-                        <button className={styles.button} type="submit">Pay now</button>
-                    </form>
-                </div>
+                    <div>
+                        <div>
+                            <label for="expirationDate">Expiration date</label>
+                            <input type="date" name="expirationDate" id="" min="today" />
+                        </div>
+                        <div>
+                            <label for="CVV">CVV</label>
+                            <input type="text" name="CVV" id="CVV" maxLength="3" />
+                        </div>
+                    </div>
+                    <button className={styles.button} type="submit">Pay now</button>
+                </form>
             
 
             </div>
